@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Toys</title>
+</head>
+<body>
+    <h1>Toys Album</h1>
+    <a href="/toys/add">ADD TOY</a>
+    <table border=1>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Brand</th>
+            <th>Quantity</th>
+            <th>Picture</th>
+            <th>Action</th>
+        </tr>
+
+        <% for (let i = 0; i < toy.length; i++) { %>
+        <tr>
+            <td><%= toy[i].id %></td>
+            <td><%= toy[i].name %></td>
+            <td><%= toy[i].country %></td>
+            <td><%= toy[i].brand %></td>
+            <td><%= toy[i].quantity %></td>
+            <td><img src="<%= toy[i].picture %>" width=190 height=170></td>
+            <td>
+                <a href="toys/edit/<%= toy[i].id %>">EDIT |</a>
+                <a href="toys/delete/<%= toy[i].id %>">| DELETE</a>
+            </td>
+            
+        </tr>
+        <% } %>
+    </table>
+</body>
+</html>

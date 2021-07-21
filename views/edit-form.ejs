@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated Toy</title>
+</head>
+<body>
+    <h1>Update Toy</h1>
+
+    <form action="/toys/edit/<%= toy.id %>" method="POST">
+    <label>Name</label>
+    <input type="text" name="name" value="<%= toy.name %>">
+    <br>
+    <label>Country</label>
+    <input type="text" name="country" value="<%= toy.country %>">
+    <br>
+    <label>Brand</label>
+    <input type="text" name="brand" value="<%= toy.brand %>">
+    <br>
+    <label>Quantity</label>
+    <input type="text" name="quantity" value="<%= toy.quantity %>">
+    <br>
+    <label>Picture</label>
+    <input type="text" name="picture" value="<%= toy.picture %>">
+    <br>
+
+    <input type="submit" value="UPDATE">
+    </form>
+</body>
+</html>
